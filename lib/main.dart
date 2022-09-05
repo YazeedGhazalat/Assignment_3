@@ -11,12 +11,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text("Animal Pics"),
+          centerTitle: true,
+          leading: Icon(Icons.camera_enhance, size: 40),
+        ),
         body: ListView(
           //scrollDirection: Axis.horizontal,
           children: [
-            Image(height: 500,
-            width: 500,
+            Image(
+              height: 500,
+              width: 500,
               image: AssetImage("images/1.jpg"),
             ),
             RaisedButton(
@@ -31,46 +36,38 @@ class MyApp extends StatelessWidget {
               onLongPress: () {},
             ),
             Image(
-              
               image: AssetImage("images/2.jpg"),
             ),
-            
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shadowColor: Colors.purpleAccent,
-                      elevation: 40,
-                      alignment: Alignment.center,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  shadowColor: Colors.purpleAccent,
+                  elevation: 40,
+                  alignment: Alignment.center,
 
-                      // fixedSize: Size(20, 20),
-                      minimumSize: Size(1, 50),
-                      primary: Colors.blue[900],
-                      onPrimary: Colors.white),
-                  onPressed: () => print("im Button 2"),
-                  child: Text("press me im 2"),
-                
-              
+                  // fixedSize: Size(20, 20),
+                  minimumSize: Size(1, 50),
+                  primary: Colors.blue[900],
+                  onPrimary: Colors.white),
+              onPressed: () => print("im Button 2"),
+              child: Text("press me im 2"),
             ),
-            Image(height: 500,
-            width: 500,
+            Image(
+              height: 500,
+              width: 500,
               image: AssetImage("images/3.jpg"),
-              
             ),
-            
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shadowColor: Colors.purpleAccent,
-                      elevation: 40,
-                      alignment: Alignment.center,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  shadowColor: Colors.purpleAccent,
+                  elevation: 40,
+                  alignment: Alignment.center,
 
-                      // fixedSize: Size(20, 20),
-                      minimumSize: Size(1, 50),
-                      primary: Colors.blue[900],
-                      onPrimary: Colors.white),
-                  onPressed: () => print("im Button 3"),
-                  child: Text("press me im 3"),
-                
-               
-              
+                  // fixedSize: Size(20, 20),
+                  minimumSize: Size(1, 50),
+                  primary: Colors.blue[900],
+                  onPrimary: Colors.white),
+              onPressed: () => print("im Button 3"),
+              child: Text("press me im 3"),
             ),
             Divider(
               color: Colors.amber,
